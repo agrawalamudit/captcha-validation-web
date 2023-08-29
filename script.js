@@ -20,14 +20,16 @@ btnSubmit.onclick = () => {
   let v = inputValue.value;
 
   if (v == captcha.innerText) {
-    msg.innerText = "Login Successful";
-  } else {
-    msg.innerText = "Invalid";
+      msg.innerText = "Login Successful";
+      msg.style = "color: green; background-color: #D5FFD0;";
   }
-  msg.style = "color: green; background-color: #D5FFD0;";
+  else {
+      msg.innerText = "Invalid";
+      msg.style = "color: #D21312; background-color: #FA9884;";
+  }
   inputValue.value = "";
   generateCaptcha();
-};
+}
 
 btnRefresh.onclick = () => {
   msg.innerText = "";
